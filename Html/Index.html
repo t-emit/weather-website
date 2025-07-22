@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WeatherWise - Home</title>
+  <link rel="stylesheet" href="CSS/index.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="navbar-brand">
+      <a href="#home">WeatherWise 🌤</a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!--=========== HOME (WEATHER APP) SECTION ===========-->
+    <section id="home">
+      <div class="content-wrapper">
+        <h1>Check the Weather</h1>
+        <p class="subtitle">Get real-time weather information for any city.</p>
+        <div class="search-box">
+          <input type="text" id="cityInput" placeholder="Enter city name" />
+          <button onclick="getWeather()">Get Weather</button>
+        </div>
+        <div class="weather" id="weatherBox">
+          <h2 id="city"></h2>
+          <img src="whthers.jpg" id="icon" alt="Weather " />
+          <p id="temperature"></p>
+          <p id="description"></p>
+        </div>
+      </div>
+    </section>
+
+    <!--=========== ABOUT SECTION ===========-->
+    <section id="about" class="alt-background">
+      <div class="content-wrapper">
+        <h2>About WeatherWise</h2>
+        <p>
+          WeatherWise is a simple and clean weather application designed to provide you with the essential weather information you need without any clutter. Built with modern web technologies, it fetches live data from the OpenWeatherMap API to deliver accurate, real-time forecasts. Our goal is to make weather checking a quick, easy, and pleasant experience.
+        </p>
+      </div>
+    </section>
+
+    <!--=========== FEEDBACK SECTION ===========-->
+    <section id="feedback">
+      <div class="content-wrapper">
+        <h2>Send Us Your Feedback</h2>
+        <p>We'd love to hear from you! Please fill out the form below.</p>
+        <form id="feedback-form">
+          <!-- IMPORTANT: Replace with your own key from web3forms.com -->
+          <input type="hidden" name="access_key" value="b0b599e6-41a1-4bc4-8cce-207a95f10b86">
+
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Submit Feedback</button>
+        </form>
+        <div id="form-status"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>WeatherWise</h4>
+        <p>© 2025. All rights reserved.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#feedback">Feedback</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>talatsiddiqui028@gmail.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="JS/index.js"></script>
+</body>
+</html>
